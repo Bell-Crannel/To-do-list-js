@@ -1,0 +1,40 @@
+.task-list {
+  width: 100%;
+  margin-top: 20px;
+}
+.task-list__item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 120px);
+  background-color: rgb(197, 197, 197);
+  align-content: center;
+  min-height: 70px;
+  border-radius: 9px;
+  padding: 4px 20px;
+  grid-column-gap: 20px;
+  
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+
+}
+
+.task-list__text {
+    font-family: $font-main;
+    font-size: 24px;
+}
+
+.task-list__btn {
+    height: 45px;
+    color:white;
+    background-color: #000000;
+    border-radius: 9px;
+    font-family: $font-main;
+    font-size: 24px;
+    
+}
+
+.task-list__delete {
+}
+.task-list__eddit {
+}

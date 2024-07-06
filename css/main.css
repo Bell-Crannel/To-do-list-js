@@ -1,4 +1,5 @@
 /* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -85,9 +86,11 @@ legend {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
+  font-family: "Nunito";
 }
 
 .wrapper {
@@ -122,10 +125,63 @@ html, body {
   width: 100%;
   text-align: center;
   padding-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .cr-item {
   width: 100%;
   display: grid;
-  grid-template-columns: 10fr 2fr;
+  grid-template-columns: 1fr 120px;
+}
+
+.cr-item__write-task {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-size: 35px;
+  border: 1.5px rgba(0, 0, 0, 0.468) solid;
+  border-right: none;
+  border-radius: 9px 0px 0px 9px;
+  padding: 4px 20px;
+}
+
+.cr-item__add-task {
+  font-size: 35px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.951);
+  font-weight: 400;
+  border-radius: 0px 9px 9px 0px;
+}
+
+.task-list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.task-list__item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 120px);
+  background-color: rgb(197, 197, 197);
+  align-content: center;
+  min-height: 70px;
+  border-radius: 9px;
+  padding: 4px 20px;
+  grid-column-gap: 20px;
+}
+.task-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.task-list__text {
+  font-family: "Nunito";
+  font-size: 24px;
+}
+
+.task-list__btn {
+  height: 45px;
+  color: white;
+  background-color: #000000;
+  border-radius: 9px;
+  font-family: "Nunito";
+  font-size: 24px;
 }/*# sourceMappingURL=main.css.map */

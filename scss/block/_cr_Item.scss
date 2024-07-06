@@ -1,0 +1,22 @@
+.cr-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+}
+.cr-item__write-task {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 35px;
+  border: 1.5px rgba(0, 0, 0, 0.468) solid;
+  border-right: none;
+  border-radius: 9px 0px 0px 9px;
+  padding: 4px 20px;
+}
+
+.cr-item__add-task {
+  font-size: 35px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.951);
+  font-weight: 400;
+  border-radius: 0px 9px 9px 0px;
+}
