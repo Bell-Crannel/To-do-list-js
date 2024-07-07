@@ -93,6 +93,11 @@ body {
   font-family: "Nunito";
 }
 
+.none {
+  display: none;
+  opacity: 0;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -152,6 +157,16 @@ body {
   border-radius: 0px 9px 9px 0px;
 }
 
+.cr-item__edit-task {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-size: 35px;
+  border: 1.5px rgba(0, 0, 0, 0.468) solid;
+  border-radius: 9px;
+  padding: 4px 20px;
+  width: 100%;
+}
+
 .task-list {
   width: 100%;
   margin-top: 20px;
@@ -192,4 +207,12 @@ body {
 .task-list__status {
   width: 30px;
   height: 30px;
+}
+
+.task-list__item_eddit {
+  transform: scale(1.4);
+}
+
+.task-list__item_eddit {
+  grid-template-columns: none;
 }/*# sourceMappingURL=main.css.map */

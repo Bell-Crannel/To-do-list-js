@@ -20,3 +20,13 @@
   font-weight: 400;
   border-radius: 0px 9px 9px 0px;
 }
+
+.cr-item__edit-task {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 35px;
+  border: 1.5px rgba(0, 0, 0, 0.468) solid;
+  border-radius: 9px;
+  padding: 4px 20px;
+  width: 100%;
+}

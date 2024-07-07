@@ -6,15 +6,53 @@ crTaskBtn.addEventListener("click", addTask(taskInp, taskContain));
 
 taskInp.addEventListener("keydown", addTask(taskInp, taskContain));
 
-document.addEventListener("click", taskControl("task-list__delete","task-list__edit"));
+document.addEventListener("click", dTask("task-list__delete"));
+document.addEventListener("click", eddTask("task-list__edit"));
 
-function taskControl(dBtn, eBtn) {
+function dTask(clasNameDeletBtn) {
   return (e) => {
-  
-    if (e.target.classList.contains(dBtn)) {
-      e.target.parentElement.remove()
-    }else if(e.target.classList.contains(eBtn)){
-      
+    if (e.target.classList.contains(clasNameDeletBtn)) {
+      e.target.parentElement.remove();
+    }
+  };
+}
+
+function eddTask(clasNameEdditBtn) {
+  return (e) => {
+    if (e.target.classList.contains(clasNameEdditBtn)) {
+      const itemWp = e.target.parentElement;
+
+      let editOldValue = itemWp.querySelector("p").textContent;
+
+      while (itemWp.children.length > 0) {
+        itemWp.children[0].remove();
+      }
+
+      const edditHtml = `  <input
+            type="text"
+            class="cr-item__edit-task"
+            value="${editOldValue}"
+          />`;
+
+      itemWp.insertAdjacentHTML("afterBegin", edditHtml);
+      const inputNewTask = itemWp.querySelector("input");
+
+      inputNewTask.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          itemWp.classList.remove("task-list__item_eddit");
+          itemWp.querySelector(".cr-item__edit-task").remove();
+          itemWp.insertAdjacentHTML(
+            "afterBegin",
+            `
+                <p class="task-list__text">${(editNewValue =
+                  inputNewTask.value)}</p>
+                <button class="task-list__delete task-list__btn" >Delete</button>
+                <button class="task-list__edit task-list__btn" >Edit</button>`
+          );
+        }
+      });
+
+      itemWp.classList.add("task-list__item_eddit");
     }
   };
 }
